@@ -25,22 +25,22 @@ namespace EasyCashIdentityProject.BusinessLayer.Concrete
 
         public CustomerAccount TGetByID(int id)
         {
-            throw new NotImplementedException();
+            return _customerAccountDal.GetByID(id);
         }
 
         public List<CustomerAccount> TGetList()
         {
-            throw new NotImplementedException();
+            return _customerAccountDal.GetList();
         }
 
         public void TInsert(CustomerAccount entity)
         {
-            throw new NotImplementedException();
+            _customerAccountDal.Insert(entity);
         }
 
         public void TUpdate(CustomerAccount entity)
         {
-            throw new NotImplementedException();
+            _customerAccountDal.Update(entity);
         }
     }
 }
