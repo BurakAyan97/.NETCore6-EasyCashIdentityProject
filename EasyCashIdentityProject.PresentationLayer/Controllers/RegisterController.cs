@@ -59,11 +59,11 @@ namespace EasyCashIdentityProject.PresentationLayer.Controllers
 
                     SmtpClient smtpClient = new SmtpClient();
                     smtpClient.Connect("smtp.gmail.com", 587, false);
-                    smtpClient.Authenticate("burakayan97@outlook.com", "");
+                    smtpClient.Authenticate("burakayan97@outlook.com", "gmailolusturulansifre");
                     smtpClient.Send(mimeMessage);
                     smtpClient.Disconnect(true);
 
-
+                    TempData["Mail"] = appUserRegisterDto.Email;
 
                     return RedirectToAction("Index", "ConfirmMail");
                 }
